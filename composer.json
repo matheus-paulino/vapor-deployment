@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.8",
         "laravel/vapor-cli": "^1.58",
         "laravel/vapor-core": "^2.31",
+        "laravel/vapor-ui": "^1.7",
         "league/flysystem-aws-s3-v3": "^3.0"
     },
     "require-dev": {

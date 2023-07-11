@@ -1,0 +1,12 @@
+id: 49669
+name: vapor-deployment
+environments:
+    production:
+        memory: 1024
+        domain: 'luna-rp.com.br'
+        cli-memory: 512
+        runtime: 'php-8.2:al2'
+        build:
+            - 'composer install --no-dev --no-interaction'
+            - 'php artisan event:cache'
+          # - 'npm ci && npm run build && rm -rf node_modules'

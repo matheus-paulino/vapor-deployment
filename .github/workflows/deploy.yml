@@ -20,7 +20,7 @@ jobs:
         run: composer global require laravel/vapor-cli
       - name: Install Project Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
-      - name: Deploy Environment
-        run: vapor deploy
+      - name: Deploy Production
+        run: vapor deploy production --commit ${{ github.sha }} --message "Deployed from Githuib Actions"
         env:
           VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
